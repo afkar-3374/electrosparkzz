@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Electrosparkzz · Websites, apps, shops and smart tools · Kasaragod, Kerala</title>
+  <meta name="description" content="Electrosparkzz builds websites, progressive web apps, online shops, 3D web experiences, AI-powered tools and IoT projects from Kasaragod, Kerala." />
+  <meta name="theme-color" content="#05070d" />
+  <link rel="canonical" href="https://electrosparkzz.in/" />
+  <meta property="og:title" content="Electrosparkzz" />
+  <meta property="og:description" content="Websites, apps, shops and smart tools, built in Kasaragod, Kerala." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #05070d; --bg-2: #0a0f1c; --navy: #0b2545; --navy-2: #0f2a4a;
+      --sky: #38bdf8; --sky-2: #7dd3fc; --sky-deep: #0ea5e9;
+      --text: #e6eefb; --muted: #8193ab; --line: rgba(125,211,252,.12); --line-strong: rgba(125,211,252,.24);
+      --panel: rgba(12,20,36,.72);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      font: 16px/1.6 "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--text); background: var(--bg);
+      background-image:
+        radial-gradient(1100px 560px at 85% -10%, rgba(14,165,233,.18), transparent 60%),
+        radial-gradient(900px 600px at -10% 15%, rgba(11,37,69,.9), transparent 60%);
+      background-attachment: fixed; min-height: 100vh; -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--sky-2); text-decoration: none; }
+    a:hover { color: var(--sky); }
+    :focus-visible { outline: 2px solid var(--sky); outline-offset: 3px; border-radius: 8px; }
+    .wrap { width: min(1120px, 100% - 32px); margin-inline: auto; }
+    .grad { background: linear-gradient(120deg, var(--sky-2), var(--sky) 45%, #3b82f6); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--sky-2); }
+    h1, h2, h3 { letter-spacing: -.02em; line-height: 1.12; margin: 0; }
+    h2 { font-size: clamp(28px, 4vw, 40px); margin-top: 10px; }
+    .muted { color: var(--muted); }
+
+    .top { position: sticky; top: 0; z-index: 5; backdrop-filter: blur(14px); background: rgba(5,7,13,.7); border-bottom: 1px solid var(--line); }
+    .top .wrap { height: 62px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--text); font-weight: 800; }
+    .brand:hover { color: var(--text); }
+    .mark { width: 32px; height: 32px; border-radius: 10px; display: grid; place-items: center; font-weight: 800; color: #03111f; background: linear-gradient(135deg, var(--sky-2), var(--sky) 45%, #1d4ed8); }
+    .nav { display: flex; gap: 22px; font-size: 14px; }
+    .nav a { color: var(--muted); } .nav a:hover { color: var(--sky-2); }
+    @media (max-width: 640px) { .nav a:not(.keep) { display: none; } }
+
+    .hero { padding: 92px 0 72px; position: relative; overflow: hidden; }
+    .hero .glow { position: absolute; width: 620px; height: 620px; right: -220px; top: -260px; border-radius: 50%; background: radial-gradient(circle, rgba(56,189,248,.28), transparent 65%); pointer-events: none; }
+    .hero h1 { font-size: clamp(44px, 7.4vw, 84px); font-weight: 800; position: relative; max-width: 14ch; }
+    .hero p.lead { color: #b7c6da; font-size: clamp(17px, 2vw, 20px); max-width: 60ch; margin: 22px 0 0; position: relative; }
+    .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 30px; position: relative; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 22px; border-radius: 999px; font-weight: 700; font-size: 15px; border: 1px solid transparent; transition: transform .15s, box-shadow .2s, border-color .2s; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: linear-gradient(135deg, var(--sky-2), var(--sky) 40%, var(--sky-deep)); color: #03111f; box-shadow: 0 12px 34px -14px rgba(56,189,248,.8); }
+    .btn-primary:hover { color: #03111f; }
+    .btn-ghost { border-color: var(--line-strong); color: var(--text); background: rgba(255,255,255,.03); }
+    .btn-ghost:hover { border-color: var(--sky); color: var(--sky-2); }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 48px; position: relative; }
+    .stat { border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; background: var(--panel); }
+    .stat strong { display: block; font-size: 22px; color: var(--sky-2); }
+    .stat span { color: var(--muted); font-size: 13px; }
+
+    section { padding: 84px 0; }
+    .head { max-width: 62ch; margin-bottom: 34px; }
+    .head p { color: var(--muted); margin: 14px 0 0; }
+    .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .svc { border: 1px solid var(--line); border-radius: 20px; padding: 24px; background: linear-gradient(180deg, rgba(15,42,74,.35), rgba(10,15,28,.92)); transition: border-color .25s, transform .25s, box-shadow .25s; }
+    .svc:hover { border-color: var(--line-strong); transform: translateY(-3px); box-shadow: 0 18px 50px -24px rgba(56,189,248,.45); }
+    .ico { width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; font-size: 20px; background: rgba(56,189,248,.1); border: 1px solid var(--line-strong); margin-bottom: 16px; }
+    .svc h3 { font-size: 18px; margin-bottom: 8px; }
+    .svc p { margin: 0; color: var(--muted); font-size: 15px; }
+
+    .work { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .proj { display: flex; flex-direction: column; gap: 10px; border: 1px solid var(--line); border-radius: 20px; padding: 24px; background: var(--panel); color: var(--text); transition: border-color .25s, transform .25s; }
+    .proj:hover { border-color: var(--sky); transform: translateY(-3px); color: var(--text); }
+    .proj .row { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+    .proj h3 { font-size: 20px; }
+    .proj p { margin: 0; color: var(--muted); font-size: 15px; }
+    .proj .url { font-size: 13px; color: var(--sky-2); margin-top: auto; }
+    .tag { font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line-strong); color: var(--sky-2); white-space: nowrap; }
+    .tag.soon { color: #fbbf24; border-color: rgba(251,191,36,.4); }
+    .tag.dev { color: var(--muted); }
+
+    .about { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: start; }
+    .about p { color: #b7c6da; margin: 0 0 14px; }
+    .facts { border: 1px solid var(--line); border-radius: 20px; padding: 22px; background: var(--panel); }
+    .facts div { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+    .facts div:last-child { border-bottom: 0; }
+    .facts span { color: var(--muted); }
+
+    footer { border-top: 1px solid var(--line); padding: 30px 0 40px; color: var(--muted); font-size: 14px; }
+    footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
+
+    @media (max-width: 900px) { .services { grid-template-columns: 1fr 1fr; } .about { grid-template-columns: 1fr; } }
+    @media (max-width: 640px) {
+      .services, .work, .stats { grid-template-columns: 1fr; }
+      .hero { padding: 60px 0 48px; }
+      section { padding: 60px 0; }
+    }
+    @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="#top"><span class="mark">E</span> Electrosparkzz</a>
+      <nav class="nav" aria-label="Main">
+        <a href="#work">Our work</a>
+        <a href="#services">What we do</a>
+        <a href="#about">About</a>
+        <a class="keep" href="https://town.electrosparkzz.in/">Visit the town →</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="wrap">
+        <p class="eyebrow">Kasaragod, Kerala</p>
+        <h1 style="margin-top:14px">Websites, apps, shops and <span class="grad">smart tools</span></h1>
+        <p class="lead">Electrosparkzz is a small team that designs and builds fast, useful software for people and small businesses: websites, installable apps, online shops, interactive 3D experiences, AI-powered tools and connected devices.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#work">See our work</a>
+          <a class="btn btn-ghost" href="#services">What we build</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>7</strong><span>live and in-progress projects</span></div>
+          <div class="stat"><strong>Web</strong><span>websites, apps and shops</span></div>
+          <div class="stat"><strong>IoT</strong><span>devices and sensors</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">What we do</p>
+          <h2>The kinds of work we take</h2>
+          <p>Tell us what you need. We start with a small, working version, then grow it with you.</p>
+        </div>
+        <div class="services">
+          <article class="svc"><div class="ico">🌐</div><h3>Websites and landing pages</h3><p>Fast, mobile-first sites for businesses, events, portfolios and launches.</p></article>
+          <article class="svc"><div class="ico">📲</div><h3>Installable apps (PWA)</h3><p>Web apps that work on phones and laptops, install to the home screen, and keep working offline.</p></article>
+          <article class="svc"><div class="ico">🛍️</div><h3>Online shops</h3><p>Product catalogue, cart, checkout, orders and an admin panel. Ready to connect to a database.</p></article>
+          <article class="svc"><div class="ico">🏝️</div><h3>3D and interactive experiences</h3><p>Shared 3D worlds in the browser, with realtime chat, vehicles and real map data.</p></article>
+          <article class="svc"><div class="ico">🧭</div><h3>AI-powered tools</h3><p>Assistants and discovery tools that answer questions, plan trips and help people decide.</p></article>
+          <article class="svc"><div class="ico">🔌</div><h3>Devices and IoT</h3><p>ESP32 and sensor projects: monitoring, dashboards and alerts over MQTT.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="wrap">
+        <div class="head">
+          <p class="eyebrow">Our pages</p>
+          <h2>What we have built</h2>
+          <p>Live projects and what is coming next.</p>
+        </div>
+        <div class="work">
+          <a class="proj" href="https://town.electrosparkzz.in/">
+            <div class="row"><h3>Electrosparkzz Town</h3><span class="tag">Live</span></div>
+            <p>A shared 3D town in Kasaragod you can walk, ride and chat in with everyone visiting. It is our home page.</p>
+            <span class="url">town.electrosparkzz.in</span>
+          </a>
+          <a class="proj" href="https://town.electrosparkzz.in/book.html">
+            <div class="row"><h3>The Electrosparkzz book</h3><span class="tag">Live</span></div>
+            <p>Our original site, laid out as a book with page turns and a page sound.</p>
+            <span class="url">town.electrosparkzz.in/book.html</span>
+          </a>
+          <a class="proj" href="https://shop.electrosparkzz.in/">
+            <div class="row"><h3>Electrosparkzz Shop</h3><span class="tag soon">Coming soon</span></div>
+            <p>A premium storefront with cart, checkout and an admin panel for products and orders.</p>
+            <span class="url">shop.electrosparkzz.in</span>
+          </a>
+          <a class="proj" href="https://triply.electrosparkzz.in/">
+            <div class="row"><h3>Triply</h3><span class="tag soon">Coming soon</span></div>
+            <p>An AI-powered tourism technology initiative, starting in Kasaragod. Discover more, travel smarter.</p>
+            <span class="url">triply.electrosparkzz.in</span>
+          </a>
+          <a class="proj" href="https://town.electrosparkzz.in/herai.html">
+            <div class="row"><h3>HERAI</h3><span class="tag dev">In development</span></div>
+            <p>An AI-powered digital platform for wellbeing, productivity, learning and everyday help, designed around women.</p>
+            <span class="url">town.electrosparkzz.in/herai.html</span>
+          </a>
+          <a class="proj" href="https://glazy.electrosparkzz.in/">
+            <div class="row"><h3>Glazy</h3><span class="tag">Live</span></div>
+            <p>A private little space for two people, installable as the Kitty Timer app.</p>
+            <span class="url">glazy.electrosparkzz.in</span>
+          </a>
+          <a class="proj" href="https://smartlab.electrosparkzz.in/">
+            <div class="row"><h3>SMART LAB</h3><span class="tag">Live</span></div>
+            <p>An ESP32 and MQTT lab monitor with live readings, plus circuit and code pages.</p>
+            <span class="url">smartlab.electrosparkzz.in</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap about">
+        <div>
+          <p class="eyebrow">About</p>
+          <h2>Small team, careful work</h2>
+          <p>Electrosparkzz is based in Kasaragod, Kerala. We make software that is simple to use, quick to load and easy to change later.</p>
+          <p>We would rather ship something small that works than something large that does not. Most of our work is public, so you can see how it is built.</p>
+        </div>
+        <div class="facts">
+          <div><span>Based in</span><strong>Kasaragod, Kerala</strong></div>
+          <div><span>Work</span><strong>Web, apps, AI, IoT</strong></div>
+          <div><span>Hosting</span><strong>Static and fast</strong></div>
+          <div><span>Projects</span><strong>Public on GitHub</strong></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© Electrosparkzz · Kasaragod, Kerala</span>
+      <span><a href="https://town.electrosparkzz.in/">town.electrosparkzz.in</a> · <a href="https://github.com/afkar-3374">GitHub</a></span>
+    </div>
+  </footer>
+</body>
+</html>
